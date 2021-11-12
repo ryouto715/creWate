@@ -1,0 +1,172 @@
+.greeting {
+    margin-bottom: 32px;
+}
+
+.profile {
+    /* background-color: greenyellow; */
+    width: 70%;
+    margin: 0 auto;
+}
+
+.box30 {
+    margin: 2em 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+    min-height: 270px;
+}
+
+.box30 .box-title {
+    font-size: 1.2em;
+    background: rgba(34, 49, 52, 0.9);
+    padding: 4px;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    padding-left: 10px;
+}
+
+.box30 p {
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.edit_profile {
+    padding-right: 5px;
+    font-size: 16px;
+    margin-top: 1%;
+    text-decoration: none;
+    color: gainsboro;
+}
+
+.edit_profile:hover {
+    color: cornflowerblue;
+}
+
+.profile p {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.profile img {
+    width:200px;
+	height:200px;
+    margin: 10px;
+	object-fit:cover;
+	border-radius:50%;
+    border: 1px solid gray;
+    float: left;
+}
+
+.right {
+    width: 65%;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+
+/* ここからMy投稿のcss */
+.posts {
+    /* background-color: greenyellow; */
+    width: 70%;
+    margin: 5% auto 0 auto;
+}
+
+.post {
+    /* background-color: hotpink; */
+    margin-bottom: 5%;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    min-height: 250px;
+}
+
+.section-title{ 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    height: 8px;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, gray, gray 2px, white 2px, white 4px);
+}  
+
+.post p {
+    color: #555;
+}
+
+.post_header {
+    background-color: rgb(242, 242, 242);
+    position: relative;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+.header_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.default_image {
+    width: 20%;
+}
+
+.post_header h1 {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    text-shadow:1px 0 5px black;
+}
+
+.content_image {
+    width: 200px;
+    margin: 10px;
+    border: solid 1px silver;
+}
+
+.post_content {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.post_content p {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.post form{
+    text-align: right;
+}
+
+input {
+    font-size: 16px;
+    color: #bac6d3;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: red;
+}

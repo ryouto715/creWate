@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="/css/new_post.css">
+
+</head>
+<div style="height:100px"></div>
+
+<div class="post_form">
+    <form action="/new_post" method="post" enctype="multipart/form-data">
+        <div>
+            <h2><i class="fas fa-edit fa-fw"></i>新規投稿</h2>
+        </div>
+
+        <div>
+            <p for="title">タイトル</p>
+            <input type="text" name="title" placeholder="タイトル" required="true" autofocus="true">
+        </div>
+
+        <%# <label class="upload-label">
+            ファイルを選択 %>
+            <input type="file" name="post_header_image" id="post_header_image">
+        <%# </label> %>
+
+        <div>
+            <p for="content">内容</p>
+            <textarea name="content" cols="50" rows="10"　required placeholder="詳細を入力"></textarea>
+        </div>
+
+        <div>
+            <%# <label class="upload-label">
+                ファイルを選択 %>
+                <input type="file" name="images[]" id="image" multiple="multiple">
+            <%# </label> %>
+            <div id="preview"></div>
+        </div>
+
+        <input type="submit" value="投稿">
+    </form>
+</div>
+
+<script src="/js/new_post.js"></script>

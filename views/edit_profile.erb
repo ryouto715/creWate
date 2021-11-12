@@ -1,0 +1,29 @@
+<head>
+<link rel="stylesheet" href="/css/edit_profile.css">
+</head>
+
+<div style="height: 100px"></div>
+
+<% @profile.each do |profile| %>
+<div class="edit_form">
+    <form action="/edit_profile" method="post" enctype="multipart/form-data">
+
+        <div>
+        <h2 for="profile"><i class="fas fa-user-edit fa-fw"></i>自己紹介</h2>
+            <textarea name="profile" cols="50" rows="10" placeholder="プロフィールに自己紹介を追加する"><%= profile['profile'] %></textarea>
+        </div>
+
+        <div>
+        <%# <label class="upload-label">
+        ファイルを選択 %>
+        <input type="file" name="profile_image" id="profile_image" value="/images/<%= profile['profile_image']%>">
+        <%# </label> %>
+        <div id="preview"></div>
+        </div>
+
+        <input type="submit" value="保存">
+    </form>
+</div>
+<% end %>
+
+<script src="/js/edit_profile.js"></script>

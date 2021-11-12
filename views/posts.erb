@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="/css/posts.css">
+</head>
+
+<%# <form action="/search" method="post">
+    <input type="text" name="keyword">
+    <input type="submit" value="検索">
+</form> %>
+<div class="posts">
+    <span class="section-title"><i class="fas fa-check fa-fw"></i>投稿一覧</span>
+    <% @posts.each do |post| %>
+        <div class="post">
+            <div class="post_header">
+                <% if post['post_header_image_path'] %>
+                    <img class="header_image" src="/images/<%= post['post_header_image_path']%>">
+                <% else %>
+                    <img class="default_image" src="/images/camera.png" alt="カメラの画像">
+                <% end %>
+                <h1><%= post['title'] %></h1>
+            </div>
+            <div class="post_content">
+                <p><%= post['content'] %></p>
+                <% if post['image_path'] %>
+                    <% post['image_path'].each do |image| %>
+                        <img class="content_image" src="/images/<%= image %>">
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<%= @search%>

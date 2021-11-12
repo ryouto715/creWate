@@ -1,0 +1,24 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<div class="loginbox">
+    <img src="/images/logo_transparent.png" class="logo" alt="ログインアイコン">
+    <%# <h1>ログイン</h1> %>
+    <form action="/signup" method="post">
+        <p>ユーザー名</p>
+        <input type="text" class="name" name="name" autofocus="true" required="true" placeholder="ユーザー名">
+        <p>メールアドレス</p>
+        <input type="email" class="email" name="email" required="true" placeholder="メールアドレス">
+        <p>パスワード</p>
+        <input type="password" class="password" name="password" required="true" placeholder="パスワード">
+        <input type="password" class="password" name="password" required="true" placeholder="パスワード(確認用)">
+        <input type="submit"　class="submit" name="signup" value="サインアップ"/>
+        <%# <a href="#" class="login-forgot-pass">パスワードを忘れた方</a><br>
+        <a href="#" class="new-acount">新規登録</a> %>
+    </form>
+</div>

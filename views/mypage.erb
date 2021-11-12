@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="/css/mypage.css">
+</head>
+
+<div style="height:80px"></div>
+<div class="container">
+    <h2 class="greeting">こんにちは！<%= @name %>さん</h2>
+
+    <% @profile.each do |profile| %>
+        <div class="profile">
+            <div class="box30">
+                <div class="box-title">
+                    <div class="title"><i class="far fa-address-card fa-fw "></i>プロフィール</div>
+                    <a class="edit_profile" href="/edit_profile"><i class="fas fa-pencil-alt fa-lg"></i></a>
+                </div>
+                <% if profile['profile_image'] %>
+                    <img class="profile_image" src="/images/<%= profile['profile_image']%>">
+                <% else %>
+                    <img class="profile_image" src="/images/upper_body.svg">
+                <% end %>
+                
+                <div class="right">
+                    <p><%= profile['profile'] %></p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+
+    <div class="posts">
+        <span class="section-title"><i class="fas fa-check fa-fw"></i>My投稿</span>
+        <% @myposts.each do |post| %>
+            <div class="post">
+                <div class="post_header">
+                    <% if post['post_header_image_path'] %>
+                        <img class="header_image" src="/images/<%= post['post_header_image_path']%>">
+                    <% else %>
+                        <img class="default_image" src="/images/camera.png" alt="カメラの画像">
+                    <% end %>
+                    <h1><%= post['title'] %></h1>
+                </div>
+                <div class="post_content">
+                    <p><%= post['content'] %></p>
+                    <% if post['image_path'] %>
+                        <% post['image_path'].each do |image| %>
+                            <img class="content_image" src="/images/<%= image %>">
+                        <% end %>
+                    <% end %>
+                </div>
+
+                <form action="/delete/<%= post['id'] %>" method="post">
+                <input type="submit" value="削除">
+                </form>
+            </div>
+        <% end %>
+    </div>
+
+</div>
